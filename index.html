@@ -11,32 +11,106 @@
 </head>
 <body class="home-template">
 
-<header class="site-header jumbotron">
-	<div class="site-nav"><a href="http://datashrimp.com:8080" target="_blank" onclick="_hmt.push(['_trackEvent', 'site-nav', 'click', 'blog'])">博客</a> <span>/</span> <a href="#footer">关于</a>
+<header class="site-header">
+	<div class="container">
+		<!-- 首页标识 -->
+		<div class="navbar-header">
+			<a href="http://datashrimp.com" class="navbar-brand">数据小虾米·主页</a> 
+		</div>
+		<!-- 导航栏 -->
+		<nav class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="mailto:datashrimp@gmail.com"><img src='img/head.png' width="30" height="30"></a></li>
+			</ul>
+		</nav>	
 	</div>
-	<div class="container"><div class="row"><div class="col-xs-12">
-		<h1>数据小虾米 · 主页</h1>
-		<p>数据科学武林风起云涌<br>随数据小虾米共闯江湖</p>
-	</div></div></div>
 </header>
 
-<main class="packages-list-container" id="all-packages">
-	<div class="container">
-		<div class="list-group packages">
-			<a href="/work/Multi-Armed-Bandit-Model.html" class="package list-group-item" data-library-name="bootstrap" target="_blank" onclick="_hmt.push(['_trackEvent', 'packages', 'click', 'bootstrap'])"><div class="row"><div class="col-md-3"><h4 class="package-name">增强学习：多臂赌博机模型基础</h4>2017-06-03</div><div class="col-md-9 hidden-xs"><p class="package-description">使用累积平均函数和神经网络对多臂赌博机Agent进行建模，使用e-贪婪策略进行训练，同样参数条件下，神经网络拟合的Agent模型表现更稳定。</p></div></div></a>
+<main class="container">
+	<br/>
+	<!-- 图片轮播 -->
+	<div id="myCarousel" class="carousel slide">
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>   
+
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="img/jianghu.jpg" alt="First slide" class="img-responsive img-rounded">
+	            <div class="carousel-caption">摄影·张家界雪景</div>
+	        </div>
+	        <div class="item">
+	            <img src="img/jianghu.jpg" alt="Second slide" class="img-responsive img-rounded">
+	            <div class="carousel-caption">摄影·标题 2</div>
+	        </div>
+	        <div class="item">
+	            <img src="img/jianghu.jpg" alt="Third slide" class="img-responsive img-rounded">
+	            <div class="carousel-caption">摄影·标题 3</div>
+	        </div>
+	    </div>
+
+		    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		        <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		        <span class="sr-only">Next</span>
+		    </a>
+	</div>
+
+	<br/><br/>
+	<!-- 内容栏 -->
+	<div class="row">
+		<div class="col-sm-4" align="middle">
+			<a href="https://www.zhihu.com/people/datashrimp/activities">
+				<img src="img/zhihu.png" width="110" height="110" title="点击前往">
+			</a>
+			<header class="entry-header">
+				<h2 class="entry-title">技术大本营</h2>
+			</header>
+			<div class="entry-content">
+				<font size=3>大数据+人工智能+科技前沿，小虾米闯荡数据科学江湖的些许心得。此外，在这里也可以和小虾米一起切磋进步！</font>
+			</div>
 		</div>
-		<div class="list-group packages">
-			<a href="/work/ContextBandit.html" class="package list-group-item" data-library-name="bootstrap" target="_blank" onclick="_hmt.push(['_trackEvent', 'packages', 'click', 'bootstrap'])"><div class="row"><div class="col-md-3"><h4 class="package-name">增强学习：多臂赌博机模型进阶</h4>2017-06-28</div><div class="col-md-9 hidden-xs"><p class="package-description">在多臂赌博机模型基础上，分别引入状态和时序的概念，支持多更复杂增强学习问题建模，进而求解OpenAI的CartPole平衡木控制问题。</p></div></div></a>
+
+		<div class="col-sm-4" align="middle">
+			<a>
+				<img src="img/weixin.png" width="120" height="110" title="扫描关注">
+			</a>
+			<header class="entry-header">
+				<h2 class="entry-title">微信公众号</h2>
+			</header>
+			<div class="entry-content">
+				<font size=3>关注第一时间收到数据小虾米的文章推送，除外技术文章，这里还有为懒人服务的理财专栏，以及随笔作品！</font>
+			</div>
 		</div>
-		<div class="list-group packages">
-			<a href="/work/Q-Learning.html" class="package list-group-item" data-library-name="bootstrap" target="_blank" onclick="_hmt.push(['_trackEvent', 'packages', 'click', 'bootstrap'])"><div class="row"><div class="col-md-3"><h4 class="package-name">增强学习：Q-Learning方法</h4>2017-07-07</div><div class="col-md-9 hidden-xs"><p class="package-description">使用Q-Table和神将网络对基于价值函数的Agent进行建模，用于求解OpenAI的FronzenLake问题，同样参数条件下，神经网络拟合的Agent模型可发现更多的可行路径。</p></div></div></a>
+
+		<div class="col-sm-4" align="middle">
+			<a>
+				<img src="img/blog.png" width="110" height="110" title="下面链接">
+			</a>
+			<header class="entry-header">
+				<h2 class="entry-title">兴趣部落格</h2>
+			</header>
+			<div class="entry-content">
+				<li><a href="https://github.com/DataShrimp"><font size=3>代码仓库</font></a></li>
+				<li><a href="https://cowlevel.net/people/datashrimp"><font size=3>游戏部落</font></a></li>
+				<li><font size=3>... ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></li>
+			</div>
 		</div>
 	</div>
 </main>
 
-<footer class="footer hidden-print" id="footer">
-	<div class="copy-right"><span>© 2016-2017 </span><span>微信公众号：数据小虾米</span>
-	<br><img src="/img/weixin.jpg" height="200" width="200">
+<!-- 脚注 -->
+<footer class="footer" id="footer">
+	<div class="copy-right">
+		<span>© 2016-2018 </span>
+		<span>数据江湖风起云涌，随小虾米共闯江湖~</span>
 	</div>
 </footer>
 
